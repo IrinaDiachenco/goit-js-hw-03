@@ -7,9 +7,9 @@ const user = {
 };
 
 //Write code under this line
-const mood = { mood: "happy" };
-const moodUser = { ...user, ...mood };
-console.log(moodUser);
+user.mood = "happy";
+
+console.log(user.mood);
 const {
   age,
   hobby,
@@ -18,7 +18,10 @@ const {
   time: timeUser = (user["full time"] = true),
 } = user;
 console.log(age, hobby, name, premium, user["full time"]);
-
+user.hobby = "skydiving";
+console.log(user.hobby);
+user.premium = false;
+console.log(user.premium);
 const keys = Object.keys(user);
 // Write code under this line
 for (const key of keys) {
